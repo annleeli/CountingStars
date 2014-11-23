@@ -18,7 +18,7 @@
                 android:id="@+id/main_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
+                android:layout_marginBottom="20dp"
                 android:text="@string/textview"
                 android:lineSpacingMultiplier="1.5"/>
 
@@ -26,15 +26,38 @@
                 android:id="@+id/main_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
+                android:layout_marginBottom="20dp"
                 android:lineSpacingMultiplier="1.5"/>
 
-            <!-- Set OnClickListener to trigger results when pressed -->
-            <Button
-                android:id="@+id/main_button"
+
+            <EditText
+                android:id="@+id/main_edittext"
+                android:layout_width="221dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/hint"/>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button"/>
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <!-- Set OnClickListener to trigger results when pressed -->
+                <Button
+                    android:id="@+id/main_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher" />
+             </LinearLayout>
+            
+
+
 
         </LinearLayout>
 

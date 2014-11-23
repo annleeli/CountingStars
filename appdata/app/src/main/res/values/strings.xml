@@ -4,5 +4,6 @@
     <string name="app_name">CountingStars</string>
     <string name="textview">This app lets you count the stars in the sky. \nGood Luck!</string>
     <string name="action_settings">Settings</string>
-    <string name="button">Press Me!</string>
+    <string name="button">Update TextView</string>
+    <string name="hint">Name</string>
 </resources>
