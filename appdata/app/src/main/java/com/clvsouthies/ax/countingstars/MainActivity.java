@@ -4,14 +4,30 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
+
+    TextView mainTextView;
+    Button mainButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // 1. Access the TextView defined in layout XML
+        // and then set its text
+        mainTextView = (TextView) findViewById(R.id.main_textview);
+        mainTextView.setText("Set in Java!");
+
+        // 2. Access the Button defined in layout XML
+        // and listen for it here
+        mainButton = (Button) findViewById(R.id.main_button);
+        mainButton.setOnClickListener((android.view.View.OnClickListener) this);
     }
 
 
@@ -35,5 +51,11 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        // Test the Button
+        mainTextView.setText("Button pressed!");
     }
 }
